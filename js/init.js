@@ -20,7 +20,7 @@
 						'action':'addBeta'},
 				complete:function(transport){
 
-					
+					$('#socialShare').fadeIn();
 					$('#form-email').attr('placeholder',"Congrats!");
 					$('#form-email').val('');
 					$('#sendBut').val("Applied!");
@@ -38,6 +38,8 @@
 				alert("Please enter a valid e-mail AND leave a message.");
 				return;
 			}
+
+
 			$('#contBut').val("Sending...");
 			$.ajax({
 				"url":'/cloud/api/settings/',
